@@ -1,0 +1,20 @@
+<mat-sidenav-container class='container'>
+	<mat-sidenav class='sidenav' mode='side' opened fixedInViewport='true' fixedTopGap='64'>
+		<mat-nav-list class='nav-list'>
+			<a *ngFor="let item of items" routerLink="{{ item.routeUrl }}" mat-list-item>
+				<i class="material-icons">
+					{{ item.icon }}
+				</i>
+				{{ item.title }}
+			</a>
+		</mat-nav-list>
+	</mat-sidenav>
+	<mat-sidenav-content class="content">
+		
+		<!-- Tag responsável por trocar as rotas da aplicação -->
+		<router-outlet>
+			
+		</router-outlet>
+
+	</mat-sidenav-content>
+</mat-sidenav-container>
