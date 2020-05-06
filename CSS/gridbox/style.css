@@ -1,0 +1,65 @@
+/* ###################################
+ G R I D B O X
+####################################
+- Bidimensional (colunas e linhas) 
+- Divisão de toda a página em linhas e colunas 
+- Colocar elementos onde quiser nessa divisão */
+
+/* .container{ 
+	display: grid;	--define como grid 
+	grid-template-columns: 0; --Define o numero de columas
+	grid-template-rows: 0; --Define o numero de linhas
+	grid-gap: 0; --Define os espaçamentos 
+		grid-row-gap: 0;
+		grid-column-gap: 0;
+	grid-template-areas: none; --Delimita areas na grid
+
+	 e mais 4 propriedades de alinhamento 
+}
+.items {
+	grid-column: auto;
+		grid-column-start: auto;
+		grid-column-end: auto;
+	grid-row: auto;
+		grid-row: auto;
+		grid-row: auto;
+	grid-area: auto;
+
+	e mais 2 propriedades de alinhamento
+}*/
+
+html, body { /* RESET */
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background: #7159c1;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	grid-template-rows: 20vh 70vh 10vh;
+	grid-template-areas: "header header"
+						 "main aside"
+						 "footer footer";
+}
+
+header { background: yellow; 
+			grid-area: header; 
+			/* grid-column: 1 / 3; grid-row: 1vh / 4vh; */
+		}
+		
+main { background: blue;
+		grid-area: main; 
+			/* grid-column: 1 / 3; grid-row: 1vh / 4vh; */
+	}
+
+aside { background: green;
+		grid-area: aside; 
+			/* grid-column: 1 / 3; grid-row: 1vh / 4vh; */
+	}
+
+footer { background: red;
+		 grid-area: footer; 
+			/* grid-column: 1 / 3; grid-row: 1vh / 4vh; */
+		}

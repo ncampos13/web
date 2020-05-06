@@ -1,0 +1,44 @@
+/* #####################################################
+    Propriedades flex para os Itens Filhos
+#######################################################*/
+.container {
+    background-color: #CCC;
+    height: 500px;
+    display: flex;
+        flex-direction: row; 
+        /* *row | column /reverse * - Direção do flex */
+        flex-wrap: nowrap; 
+        /* *nowrap | wrap /reverse - quebra de linha */
+        flex-flow: row wrap; 
+        /* flex-direction + flex-wrap */
+        justify-content: flex-start;
+        /* *flex-start | flex-end | center - alinhamento horizontal */
+        align-items: stretch;
+        /* *stretch | flex-start | flex-end | center - alinhamento vertical */
+        align-content: stretch;
+        /* *strech | flex-start | flex-end | center - alinhamento do conteudo */
+}
+
+.item {
+    background-color: #333;
+    color: #FFF;
+    padding: 20px;
+    margin: 5px;
+    height: 30px;
+
+    flex: 1 1 300px;
+}
+/* PROPRIEDADES 
+order: n; - Ordenação itens container
+align-self: *auto | flex-start | flex-end | center - alinhamento item de acordo com a direção do flex (flex-direction)  
+Propriedades importantes
+    flex-grow: *0; - Proporção de ocupação de espaço dos itens;
+    flex-shrink -  Proporção de diminuçao de espaço dos itens;
+    flex-basis: npx; - largura inicial dos itens
+    flex: - agrupa as 3 props anteriores
+
+*/
+.article-1 { background-color: red; flex-shrink: 2;}
+.article-2 { }
+.article-3 { }
+.article-4 { }

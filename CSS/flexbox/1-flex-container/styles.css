@@ -1,0 +1,28 @@
+/* #####################################################
+    Propriedades flex para o container
+#######################################################*/
+.container {
+    background-color: #CCC;
+    height: 500px;
+    display: flex;
+        flex-direction: column; 
+        /* *row | column /reverse * - Direção do flex */
+        flex-wrap: nowrap; 
+        /* *nowrap | wrap /reverse - quebra de linha */
+        flex-flow: row wrap; 
+        /* flex-direction + flex-wrap */
+        justify-content: flex-start;
+        /* *flex-start | flex-end | center | stretch | space-between | space-around - alinhamento horizontal */
+        align-items: stretch;
+        /* *stretch | flex-start | flex-end | center | space-between | space-around - alinhamento vertical */
+        align-content: stretch;
+        /* *strech | flex-start | flex-end | center - alinhamento do conteudo */
+}
+
+.container .item {
+    background-color: #333;
+    color: #FFF;
+    padding: 20px;
+    margin: 5px;
+    width: 200px;
+}
